@@ -1,0 +1,19 @@
+{
+    "name": "Molecule Translator",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "description": "Translate molecule SMILES to image while you read and write.",
+    "action": {
+        "default_popup": "popup.html"
+        },
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "js": ["content_script.js"],
+            "css": ["content_script.css"]
+        }
+        ],
+    "content_security_policy": {
+    "extension_pages": "default-src 'self' 'wasm-unsafe-eval'"
+  }
+  }
